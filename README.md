@@ -58,3 +58,29 @@ as a result of this I got 1 fake user in my DB instead of 10 as I've asked in my
 
 5. now, External API
    seeds.py line 39-49. run the file pyhton3 seeds.py
+   kinda self exploratory I'll take notes if I feel needed
+   ->print(meal_data)
+   prints all of the information with the random letter, this time it was g. it's json data so we can access keys so run:
+   ipdb> exit
+   change print command in seeds.py
+   -> print(len(meal_data["meals"]))
+   print(meal_data["meals"][0])
+   so we can check how many meals are going to be in this and we can grab the first one cuz the list is long
+   so the first result in terminal 38 so with this random letter(b this time) we have 38 recipes and the first one is Bakewell tart object a long return with evrything about that recipe
+   ->we chnage the print command and run one more time to grab just the number of recipes and the name of the first recipe with (which random letter will be this time)
+   print(len(meal_data["meals"]))
+   print(meal_data["meals"][0]["strMeal"])
+   -> result: 🌱 Seeding DB...
+   7
+   Garides Saganaki
+   ✅ Done seeding!
+
+# I'm tired taking notes and code along as I watch cuz it takes all day to finish the video. Need to move on so the list of the actions with time stamps to refer back
+
+1. time stamp 1:35
+   looping through the meal lists we grab by using external API
+   adding the meal to the DB
+
+2. time stamp 1:38
+   one-to-many relationship
+   code demo time stamp

@@ -36,16 +36,18 @@ for _ in range(10):
     # email - username@gmail.com
 
 
-    # Using External API 
-    letters = ["a", "b", "c", "d", "e", "f", "g",]
-    request = requests.get(f"https://www.themealdb.com/api/json/v1/1/search.php?f={random.choice(letters)}")
+# Using External API 
+letters = ["a", "b", "c", "d", "e", "f", "g",]
+request = requests.get(f"https://www.themealdb.com/api/json/v1/1/search.php?f={random.choice(letters)}")
     #f in this API at the end before ={random.choice(letters)} is to grab meal starts with those letter. for example if I finish the api address f=a and search in google the recipes starts with letter a will be seen. f=g recipes starts with letter g etc so above we grab random letter from letters variable
-    meal_data = json.loads(request.text)
-
+meal_data = json.loads(request.text)
+print(len(meal_data["meals"]))
+print(meal_data["meals"][0]["strMeal"])
 
 # Use the Meals DB to populate the meals
 # Link: https://www.themealdb.com/api/json/v1/1/search.php?f=a
 # Random element from list: https://docs.python.org/3/library/random.html?highlight=random#random.sample
+
 
 print("✅ Done seeding!")
 
