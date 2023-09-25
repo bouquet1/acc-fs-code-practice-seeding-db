@@ -83,4 +83,6 @@ as a result of this I got 1 fake user in my DB instead of 10 as I've asked in my
 
 2. time stamp 1:38
    one-to-many relationship
-   code demo time stamp
+   CODE DEMO time stamp 1:48
+   making the connection between tables with foreignkey time stamp 1:50
+   test DB 1:55
